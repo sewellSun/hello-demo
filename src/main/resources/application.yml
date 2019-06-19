@@ -1,0 +1,16 @@
+server:
+  port: 9002
+management:
+  server:
+    port: 9003
+  endpoints:
+    web:
+      base-path: /monitor
+      exposure:
+        include: '*'
+    health:
+      show-details: always
+
+sunq:
+  1、呵呵呵呵
+  2、哈哈哈
