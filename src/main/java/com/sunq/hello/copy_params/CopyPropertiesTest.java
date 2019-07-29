@@ -1,5 +1,6 @@
 package com.sunq.hello.copy_params;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.BeanUtils;
 
 import java.util.ArrayList;
@@ -55,6 +56,35 @@ public class CopyPropertiesTest {
 
 		System.out.println("拷贝后的animal属性");
 		System.out.println(animal);
+
+		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");
+
+		List<Leg> legs2 = new ArrayList<>();
+
+		System.out.println("拷贝前的legs属性");
+		System.out.println(legs);
+
+		System.out.println("拷贝前的legs2属性");
+		System.out.println(legs2);
+		// 拷贝属性
+		//BeanUtils.copyProperties(legs,legs2);
+
+		legs2 = JSON.parseArray(JSON.toJSONString(legs), Leg.class);
+
+
+		System.out.println("拷贝后的legs属性");
+		System.out.println(legs);
+
+		System.out.println("拷贝后的legs2属性");
+		System.out.println(legs2);
+
+
+
+
+
 
 
 	}
